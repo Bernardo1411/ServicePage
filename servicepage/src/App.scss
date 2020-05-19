@@ -1,7 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 
 .App{
-    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d5d8d8;
     height: 100vh;
     width: auto;
 }
