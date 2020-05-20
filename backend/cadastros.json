@@ -1,6 +1,19 @@
-[
+{
+  "clients": [
     {
-        "email": "skywalker@hotmail.com",
-        "password": "Darthvader123"
+      "email": "Bernardo1411@hotmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "email": "skywalker@hotmail.com",
+      "password": "darthvader123",
+      "id": 2
+    },
+    {
+      "email": "randomperson@gmail.com",
+      "password": "person123",
+      "id": 3
     }
-]
+  ]
+}

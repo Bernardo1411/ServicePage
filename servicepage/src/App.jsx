@@ -5,6 +5,7 @@ import Contact from './components/Contact'
 import Home from './components/Home'
 import Navigator from './components/Navgator'
 import Form from './components/Form'
+import Success from './components/success'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path='/form' component={Form} />
+            <Route path='/success' component={Success}/>
           </Switch>
         </BrowserRouter>
       </div>
