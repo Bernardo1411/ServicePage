@@ -14,6 +14,11 @@
       "email": "randomperson@gmail.com",
       "password": "person123",
       "id": 3
+    },
+    {
+      "email": "cocacola@hotmail.com",
+      "password": "cocaine123",
+      "id": 4
     }
   ]
 }
