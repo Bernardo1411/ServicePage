@@ -19,6 +19,16 @@
       "email": "cocacola@hotmail.com",
       "password": "cocaine123",
       "id": 4
+    },
+    {
+      "email": "walterwhite@gmail.com",
+      "password": "thebluething123",
+      "id": 5
+    },
+    {
+      "email": "gigidagostino@hotmail.com",
+      "password": "flywithme123",
+      "id": 6
     }
   ]
 }
