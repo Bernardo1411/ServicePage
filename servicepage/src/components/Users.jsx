@@ -1,22 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import { Button, ListGroup, ListGroupItem } from 'react-bootstrap'
-import axios from 'axios'
+import {UsersContext} from '../context/usersContext'
 
-export default class Users extends Component {
-    state = {
-        clients: []
-    }
-
-    componentDidMount() {
-        axios.get('http://localhost:3001/clients').then(res => this.setState({ clients: res.data }))
-    }
-
-    delete(id) {
-        axios.delete('http://localhost:3001/clients/' + id)
-    }
-
-    render() {
-        const List = this.state.clients.map(client => {
+export default props => {
+    const {clients, del} = useContext(UsersContext)
+    console.log(clients.clients)
+        const List = clients.clients.map(client => {
             return (
                     <ListGroupItem className="d-flex mx-5 px-3">
                         <div className="mr-auto">{client.email}</div>
@@ -31,5 +20,4 @@ export default class Users extends Component {
                 </ListGroup>
             </div>
         )
-    }
 }

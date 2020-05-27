@@ -4,12 +4,12 @@ import './Form.scss'
 import {UsersContext} from '../context/usersContext'
 
 export default props => {
-    const {client, writing, submit} = useContext(UsersContext)
+    const {clients, writing, submit} = useContext(UsersContext)
 
         return (
             <div className="mx-5 px-5">
-                <h3>{client.email}</h3>
-                <h3>{client.password}</h3>
+                <h3>{clients.client.email}</h3>
+                <h3>{clients.client.password}</h3>
                 <Jumbotron className="Jumbotron mx-5">
                     <Form>
                     <h3 className="mb-5"> Sign up</h3>
