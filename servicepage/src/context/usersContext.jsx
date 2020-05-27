@@ -1,5 +1,6 @@
-import React, {createContext, useState} from 'react';
+import React, { createContext, useState } from 'react';
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
 
 export const UsersContext = createContext()
 
@@ -11,7 +12,8 @@ const UsersContextProvider = props => {
     })
 
     const writing = (e, id) => {
-        setClient({...client,
+        setClient({
+            ...client,
             [`${id}`]: e.target.value
         })
     }
@@ -22,11 +24,19 @@ const UsersContextProvider = props => {
         props.history.push('/success')
     }
 
-    return ( 
-        <UsersContext.Provider value={{client, writing, submit}}>
+    const show = () => {
+        axios.get('http://localhost:3001/clients').then(res => this.setClient({ client: res.data }))
+    }
+
+    const del = (id) => {
+        axios.delete('http://localhost:3001/clients/' + id)
+    }
+
+    return (
+        <UsersContext.Provider value={{ client, writing, submit }}>
             {props.children}
         </UsersContext.Provider>
-     );
+    );
 }
- 
-export default UsersContextProvider;
+
+export default withRouter(UsersContextProvider);
