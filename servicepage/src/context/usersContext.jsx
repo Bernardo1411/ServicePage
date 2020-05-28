@@ -7,12 +7,12 @@ export const UsersContext = createContext()
 
 const UsersContextProvider = props => {
     const [clients, setClients] = useState({
-        clients:[]
+        clients:[],
     })
     
     useEffect(() => {
         axios.get('http://localhost:3001/clients').then(res => setClients({ clients: res.data }))
-    }, [clients.email])
+    }, [clients.clients.password])
 
     const addClient = (email, password) => {
         axios.post('http://localhost:3001/clients', {email, password, id: v4()})

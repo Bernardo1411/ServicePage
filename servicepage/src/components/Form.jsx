@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Form, Button, Jumbotron } from 'react-bootstrap'
 import './Form.scss'
-import axios from 'axios'
 import { UsersContext } from '../context/usersContext'
 
 export default props => {
